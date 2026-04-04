@@ -1,34 +1,57 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
+/* NZ Road Tours - Custom Styles */
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+.animate-fade-in-up {
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 {
+    animation: fadeInUp 0.7s ease-out 0.15s forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-up-delay-2 {
+    animation: fadeInUp 0.7s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-up-delay-3 {
+    animation: fadeInUp 0.7s ease-out 0.45s forwards;
+    opacity: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: #2D5A43;
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
+::-webkit-scrollbar {
+    width: 6px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+::-webkit-scrollbar-track {
+    background: #F4F2EE;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2D5A43;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #224432;
 }
