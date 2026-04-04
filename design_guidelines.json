@@ -1,0 +1,122 @@
+{
+  "theme": "light",
+  "archetype": "Organic & Earthy",
+  "persona_notes": "Premium private transport. Avoid generic taxi/shuttle vibes. The goal is to evoke trust, comfort, and the epic scale of the New Zealand landscape. Design uses generous spacing, asymmetrical grids for destinations, and a warm, grounded color palette.",
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "DM Sans",
+    "weights": {
+      "headings": "font-light for elegance, font-medium for emphasis (avoid default bold)",
+      "body": "font-normal"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base leading-relaxed",
+      "overline": "text-xs tracking-[0.2em] uppercase font-medium text-[#57685E]"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#F4F2EE",
+      "secondary": "#FFFFFF",
+      "tertiary": "#EAE5DB"
+    },
+    "text": {
+      "primary": "#1C2B23",
+      "secondary": "#57685E",
+      "inverse": "#FFFFFF"
+    },
+    "brand": {
+      "primary": "#2D5A43",
+      "primary_hover": "#224432",
+      "accent": "#D97746",
+      "accent_hover": "#BD6032"
+    },
+    "surface": {
+      "glass": "bg-white/70 backdrop-blur-xl border-black/5",
+      "card": "bg-white border-[#EAE5DB] shadow-sm",
+      "dark_footer": "bg-[#1C2B23] text-white"
+    }
+  },
+  "layout_and_spacing": {
+    "section_padding": "py-20 md:py-32",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "grid_modes": {
+      "destinations": "grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6 md:gap-8 (Use Tetris Grid logic for asymmetry)",
+      "services": "grid-cols-1 md:grid-cols-3 gap-6 (Control Room Variant - uniform height via h-full)"
+    },
+    "border_radius": "rounded-xl for standard cards, rounded-2xl for floating images, rounded-none for edge-to-edge sections",
+    "alignment": "Left-align paragraphs, inputs, and dense content. Center-align only for short section headers if it improves rhythm."
+  },
+  "components": {
+    "hero": {
+      "style": "Full viewport height (min-h-[80vh] or min-h-[600px]). Use 'hero_background' image with a left-to-right gradient overlay (bg-gradient-to-r from-[#1C2B23]/95 via-[#1C2B23]/60 to-transparent) to ensure perfect text contrast. Text must be aligned left.",
+      "cta": "Primary button in accent color (Terracotta #D97746) to drive bookings, secondary in glass/white."
+    },
+    "header": {
+      "style": "Sticky top, Crystal Glass effect (bg-white/80 backdrop-blur-md border-b border-black/5). Navigation links visible on desktop, no hamburger on desktop."
+    },
+    "marquee_testimonials": {
+      "style": "Editorial Ribbon style. Pale background (F4F2EE), dark text, massive gaps (gap-32), Outfit font, smooth slow drift using react-fast-marquee."
+    },
+    "forms": {
+      "style": "Shadcn based. Stripped down Vercel look. Inputs with bg-white, border-[#EAE5DB], focus:border-[#2D5A43] focus:ring-[#2D5A43]/20. Use Shadcn Calendar/Popover for Date selection."
+    },
+    "buttons": {
+      "style": "px-6 py-3 rounded-lg transition-all duration-200. Hover must be explicitly defined."
+    }
+  },
+  "media": {
+    "hero_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/ec54f033-3415-4ba5-8cb6-57323ae05d70/images/dfa1b40089b0212cf9f5c4ab655beaec06c4a6936d9b62275c3443d0dece2166.png",
+      "description": "Black premium luxury SUV on scenic NZ mountain road",
+      "placement": "Hero Section Background"
+    },
+    "chauffeur_fleet": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/ec54f033-3415-4ba5-8cb6-57323ae05d70/images/404429e65295033d7260e90ceeef22946d19e6d69708b5fca398224f376bcda9.png",
+      "description": "Professional chauffeur with luxury van",
+      "placement": "Fleet / Chauffeur Service Section (About Us or Services)"
+    },
+    "van_interior": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/ec54f033-3415-4ba5-8cb6-57323ae05d70/images/ebec20c20439bdc8178dd1581ea64f7b39c90622b8c44dce45a35960e44ee7ad.png",
+      "description": "Premium luxury van interior looking at mountains",
+      "placement": "Comfort / Why Choose Us Section"
+    },
+    "destination_mountains": {
+      "url": "https://images.pexels.com/photos/35364668/pexels-photo-35364668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Curved road in Otago mountains",
+      "placement": "Destinations Bento Grid - The Hero block (col-span-full md:col-span-8 row-span-2)"
+    },
+    "destination_snow": {
+      "url": "https://images.pexels.com/photos/1353238/pexels-photo-1353238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Snow-capped mountains Canterbury",
+      "placement": "Destinations Bento Grid - The Tall block (col-span-4 row-span-2)"
+    },
+    "destination_hobbiton": {
+      "url": "https://images.unsplash.com/photo-1505632436162-719c53ad6a0d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwyfHxob2JiaXRvbiUyMG5ldyUyMHplYWxhbmR8ZW58MHx8fHwxNzc1MjkwMzIxfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Hobbiton New Zealand",
+      "placement": "Destinations Bento Grid - The Square block (col-span-4 row-span-1)"
+    }
+  },
+  "testing": {
+    "attributes": "All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='booking-submit-btn', data-testid='nav-services-link')."
+  },
+  "technical_instructions": {
+    "libraries_to_install": [
+      "@phosphor-icons/react",
+      "react-fast-marquee",
+      "lucide-react"
+    ],
+    "shadcn_components_to_install": [
+      "form",
+      "input",
+      "select",
+      "button",
+      "calendar",
+      "popover",
+      "dialog"
+    ]
+  }
+}
