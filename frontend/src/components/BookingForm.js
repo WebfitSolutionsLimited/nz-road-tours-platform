@@ -77,7 +77,7 @@ export default function BookingForm({ compact = false }) {
     passengers: formData.num_passengers,
     message: formData.message,
   }),
-});
+}); // we have updated this 
 
 if (error) throw error;
 
