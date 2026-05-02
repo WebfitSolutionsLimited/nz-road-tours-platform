@@ -30,22 +30,27 @@ export default function Navbar() {
       data-testid="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isTransparent
-          ? "bg-transparent"
-          : "bg-white/80 backdrop-blur-md border-b border-black/5 shadow-sm"
+          ? "bg-black/40 backdrop-blur-md"
+          : "bg-white/90 backdrop-blur-md border-b border-black/5 shadow-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2" data-testid="nav-logo">
-            <span
-              className={`text-xl md:text-2xl font-medium tracking-tight transition-colors duration-300 ${
-                isTransparent ? "text-white" : "text-[#1C2B23]"
-              }`}
-            >
-              NZ Road Tours
-            </span>
+
+          {/* ✅ LOGO */}
+          <Link
+            to="/"
+            className="flex items-center"
+            data-testid="nav-logo"
+          >
+            <img
+              src="/logo.png"
+              alt="NZ Road Tours Logo"
+              className="h-20 md:h-21 w-30 object-contain"
+            />
           </Link>
 
+          {/* ✅ DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-8" data-testid="nav-desktop">
             {navLinks.map((link) => (
               <Link
@@ -65,6 +70,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+
             <Link to="/contact">
               <Button
                 data-testid="nav-book-now-btn"
@@ -75,16 +81,29 @@ export default function Navbar() {
             </Link>
           </nav>
 
+          {/* ✅ MOBILE MENU */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon" data-testid="nav-mobile-menu-btn">
-                <Menu className={`h-6 w-6 transition-colors ${isTransparent ? "text-white" : "text-[#1C2B23]"}`} />
+                <Menu
+                  className={`h-6 w-6 transition-colors ${
+                    isTransparent ? "text-white" : "text-[#1C2B23]"
+                  }`}
+                />
               </Button>
             </SheetTrigger>
+
             <SheetContent side="right" className="bg-white w-80">
-              <div className="mt-8 mb-6">
-                <span className="text-xl font-medium text-[#1C2B23]">NZ Road Tours</span>
+
+              {/* ✅ MOBILE LOGO */}
+              <div className="mt-8 mb-6 flex items-center">
+                <img
+                  src="/logo.png"
+                  alt="NZ Road Tours Logo"
+                  className="h-10 w-auto"
+                />
               </div>
+
               <nav className="flex flex-col gap-3">
                 {navLinks.map((link) => (
                   <Link
@@ -101,17 +120,26 @@ export default function Navbar() {
                     {link.name}
                   </Link>
                 ))}
+
                 <Link to="/contact" onClick={() => setOpen(false)}>
                   <Button className="bg-[#D97746] hover:bg-[#BD6032] text-white w-full rounded-lg mt-2">
                     Book Now
                   </Button>
                 </Link>
+
                 <div className="mt-6 pt-6 border-t border-[#EAE5DB] space-y-3">
-                  <a href="tel:+64221234567" className="flex items-center gap-3 text-[#57685E] hover:text-[#2D5A43] transition-colors">
+                  <a
+                    href="tel:+64221234567"
+                    className="flex items-center gap-3 text-[#57685E] hover:text-[#2D5A43] transition-colors"
+                  >
                     <Phone className="h-4 w-4" />
                     <span className="text-sm">+64 22 123 4567</span>
                   </a>
-                  <a href="mailto:info@nzroadtours.co.nz" className="flex items-center gap-3 text-[#57685E] hover:text-[#2D5A43] transition-colors">
+
+                  <a
+                    href="mailto:info@nzroadtours.co.nz"
+                    className="flex items-center gap-3 text-[#57685E] hover:text-[#2D5A43] transition-colors"
+                  >
                     <Mail className="h-4 w-4" />
                     <span className="text-sm">info@nzroadtours.co.nz</span>
                   </a>
