@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
+import { supabase } from "../lib/supabase";
 import {
   Select,
   SelectContent,
@@ -15,10 +16,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { CalendarDays, Loader2 } from "lucide-react";
 import { format } from "date-fns";
 import { toast } from "sonner";
-import axios from "axios";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
 
 export default function BookingForm({ compact = false }) {
   const [loading, setLoading] = useState(false);
@@ -46,10 +44,43 @@ export default function BookingForm({ compact = false }) {
     }
     setLoading(true);
     try {
-      await axios.post(`${API}/enquiries`, {
-        ...formData,
-        travel_date: date ? format(date, "yyyy-MM-dd") : "",
-      });
+     const { error } = await supabase
+  .from("nz_road_tours_enquiries")
+  
+  .insert([
+    {
+      full_name: formData.full_name,
+      email: formData.email,
+      phone: formData.phone,
+      service_type: formData.service_type,
+      pickup_location: formData.pickup_location,
+      dropoff_location: formData.dropoff_location,
+      travel_date: date ? format(date, "yyyy-MM-dd") : null,
+      passengers: formData.num_passengers,
+      message: formData.message,
+    },
+    
+  ]);
+  await fetch("https://rhqykhtabnadfjjufbgi.supabase.co/functions/v1/hyper-function", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    full_name: formData.full_name,
+    email: formData.email,
+    phone: formData.phone,
+    service_type: formData.service_type,
+    pickup_location: formData.pickup_location,
+    dropoff_location: formData.dropoff_location,
+    travel_date: date ? format(date, "yyyy-MM-dd") : null,
+    passengers: formData.num_passengers,
+    message: formData.message,
+  }),
+});
+
+if (error) throw error;
+
       toast.success("Enquiry submitted! We'll get back to you within 24 hours.");
       setFormData({
         full_name: "",

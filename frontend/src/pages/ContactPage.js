@@ -5,23 +5,23 @@ const contactCards = [
   {
     icon: Phone,
     title: "Phone",
-    detail: "+64 22 123 4567",
-    href: "tel:+64221234567",
+    detail: "+64 21 891  241",
+    href: "tel:+6421891241",
     testId: "contact-phone",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
     detail: "Chat with us anytime",
-    href: "https://wa.me/64221234567",
+    href: "https://wa.me/6421891241",
     external: true,
     testId: "contact-whatsapp",
   },
   {
     icon: Mail,
     title: "Email",
-    detail: "info@nzroadtours.co.nz",
-    href: "mailto:info@nzroadtours.co.nz",
+    detail: "pramensingh@taxcservice.com",
+    href: "mailto:pramensingh@taxcservice.com",
     testId: "contact-email",
   },
   {

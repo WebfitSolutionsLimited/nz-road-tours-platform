@@ -71,12 +71,12 @@ export default function Footer() {
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors duration-200"
                 >
                   <Phone className="h-4 w-4 flex-shrink-0" />
-                  +64 22 123 4567
+                  +64 21 891 241
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/64221234567"
+                  href="https://wa.me/6421891241"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="footer-whatsapp"
