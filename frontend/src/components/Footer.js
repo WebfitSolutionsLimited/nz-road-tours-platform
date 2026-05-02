@@ -88,12 +88,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@nzroadtours.co.nz"
+                  href="mailto:pramensingh@taxcservice.com"
                   data-testid="footer-email"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors duration-200"
                 >
                   <Mail className="h-4 w-4 flex-shrink-0" />
-                  info@nzroadtours.co.nz
+                  pramensingh@taxcservice.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
