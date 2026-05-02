@@ -66,7 +66,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+64221234567"
+                  href="tel:+6421891241"
                   data-testid="footer-phone"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors duration-200"
                 >
