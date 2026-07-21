@@ -106,7 +106,7 @@ export default function Footer() {
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors duration-200"
                 >
                   <Mail className="h-4 w-4 flex-shrink-0" />
-                  pramensingh@taxcservice.com
+                  info@nzroadtours.co.nz
                 </a>
               </li>
 
