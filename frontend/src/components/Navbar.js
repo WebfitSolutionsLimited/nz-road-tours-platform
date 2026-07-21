@@ -36,19 +36,22 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
 
-          {/* LOGO (UNCHANGED) */}
+          {/* Brand logo */}
           <Link
             to="/"
-            className="flex items-center"
+            className="group flex items-center"
             data-testid="nav-logo"
+            aria-label="NZ Road Tours home"
           >
-            <img
-              src="/logo.png"
-              alt="NZ Road Tours Logo"
-              className="h-20 md:h-21 w-30 object-contain"
-            />
+            <span className="relative flex h-14 w-[190px] md:h-16 md:w-[220px] items-center justify-center rounded-xl bg-white px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.16)] ring-1 ring-black/5 transition-transform duration-200 group-hover:scale-[1.02]">
+              <img
+                src="/logo.png"
+                alt="NZ Road Tours"
+                className="h-full w-full object-contain"
+              />
+            </span>
           </Link>
 
           {/* DESKTOP NAV */}
@@ -94,11 +97,13 @@ export default function Navbar() {
 
               {/* MOBILE LOGO */}
               <div className="mt-8 mb-6 flex items-center">
-                <img
-                  src="/logo.png"
-                  alt="NZ Road Tours Logo"
-                  className="h-12 w-auto"
-                />
+                <span className="relative flex h-14 w-[190px] items-center justify-center rounded-xl bg-white px-3 py-2 shadow-md ring-1 ring-black/5">
+                  <img
+                    src="/logo.png"
+                    alt="NZ Road Tours"
+                    className="h-full w-full object-contain"
+                  />
+                </span>
               </div>
 
               <nav className="flex flex-col gap-3">

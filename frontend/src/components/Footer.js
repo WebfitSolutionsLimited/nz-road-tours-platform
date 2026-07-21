@@ -25,9 +25,13 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="lg:col-span-1">
-            <span className="text-2xl font-medium tracking-tight">
-              NZ Road Tours
-            </span>
+            <Link to="/" aria-label="NZ Road Tours home">
+              <img
+                src="/logo.png"
+                alt="NZ Road Tours Logo"
+                className="h-16 w-auto max-w-[200px] object-contain"
+              />
+            </Link>
             <p className="mt-4 text-sm text-white/50 leading-relaxed">
               Your trusted private tour operator based in Auckland, offering personalised travel experiences across New Zealand.
             </p>
