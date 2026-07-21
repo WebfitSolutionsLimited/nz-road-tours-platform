@@ -134,11 +134,11 @@ export default function Navbar() {
                   </a>
 
                   <a
-                    href="mailto:pramensingh@taxcservice.com"
+                    href="mailto:info@nzroadtours.co.nz"
                     className="flex items-center gap-3 text-[#57685E] hover:text-[#2D5A43]"
                   >
                     <Mail className="h-4 w-4" />
-                    <span className="text-sm">pramensingh@taxcservice.com</span>
+                    <span className="text-sm">info@nzroadtours.co.nz</span>
                   </a>
                 </div>
               </nav>

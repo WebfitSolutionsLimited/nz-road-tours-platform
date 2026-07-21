@@ -102,7 +102,7 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="mailto:pramensingh@taxcservice.com"
+                  href="mailto:info@nzroadtours.co.nz"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors duration-200"
                 >
                   <Mail className="h-4 w-4 flex-shrink-0" />

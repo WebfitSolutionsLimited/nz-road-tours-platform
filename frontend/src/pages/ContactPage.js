@@ -20,8 +20,8 @@ const contactCards = [
   {
     icon: Mail,
     title: "Email",
-    detail: "pramensingh@taxcservice.com",
-    href: "mailto:pramensingh@taxcservice.com",
+    detail: "info@nzroadtours.co.nz",
+    href: "mailto:info@nzroadtours.co.nz",
     testId: "contact-email",
   },
   {
